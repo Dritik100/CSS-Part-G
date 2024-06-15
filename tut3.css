@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    height: 100%;
+    width: 330px;
+    position: relative ;
+   
+}
+input[type="checkbox"]{
+    display: none;
+}
+.wrapper .menu-btn{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: 45px;
+    width: 45px;
+    z-index: 999; 
+    color: #f2f2f2;
+    background: #4a4a4a;
+    border: 1px solid #333 ;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 23px;
+    transition: all 0.3s ease;
+}
+#btn:checked ~ .menu-btn{
+    left: 247px;
+}
+
+#btn:checked ~ .menu-btn i:before{
+    content: "\f00d";
+}
+
+.wrapper #sidebar {
+    position: fixed;
+    height: 100%;
+    width: 270px;
+    background-color: #404040;
+    overflow: hidden;
+    left: -270px;
+    transition: all 0.3 ease;
+
+}
+#btn:checked ~ #sidebar{
+    left: 0;
+}
+#sidebar .title{
+    color: #f2f2f2;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px ;
+    background: #333;
+    text-align: center;
+}
+
+#sidebar .list_items{
+    position: relative;
+    background: #404040 ;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+#sidebar .list_items li{
+    color: #f2f2f2;
+    padding-left: 40px;
+    line-height: 40px;
+    border-top: 1px solid rgba(255,255, 255,  0.5);
+    border-bottom: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+#sidebar .list_items li:hover{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 10px 3px #222;
+    
+   
+}
+
+#sidebar .list_items li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    
+}
+#sidebar .list_items li  i {
+    margin-right: 20px;
+}
+
+#sidebar .list_items .icons{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#sidebar .list_items .icons a{
+    margin: 5px;
+    color: #f2f2f2 ;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #4a4a4a;
+    border: 1px solid #383838;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+}
+
+#sidebar .list_items .icons a:hover{
+    background-color: #404040;
+
+}
